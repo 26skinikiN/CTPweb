@@ -1,0 +1,92 @@
+/* Основные стили для всей страницы */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Стили для заголовков */
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #2c3e50;
+}
+
+h2 {
+    font-size: 2em;
+    color: #2980b9;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 1.75em;
+    color: #e74c3c;
+    margin-top: 20px;
+}
+
+/* Стили для списка фильмов */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #2980b9;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для изображений */
+img {
+    width: 100%;
+    max-width: 450px; /* Устанавливаем фиксированную ширину изображений */
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Контейнер для выравнивания изображений по горизонтали */
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Таблица с параметрами фильмов */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: #fff;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
