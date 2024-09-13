@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета для заказа экипировки Формулы 1</title>
+</head>
+<body>
+
+<h1>Анкета для заказа экипировки Формулы 1</h1>
+
+<!-- Форма для заказа экипировки -->
+<form action="/submit-order" method="post">
+    <!-- Личные данные клиента -->
+    <fieldset>
+        <legend>Личные данные</legend>
+
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+    </fieldset>
+
+    <!-- Выбор экипировки -->
+    <fieldset>
+        <legend>Выбор экипировки</legend>
+
+        <label for="suit-size">Размер гоночного костюма:</label>
+        <input type="text" id="suit-size" name="suit-size" required><br><br>
+
+        <label>Шлем:</label>
+        <input type="radio" id="helmet-yes" name="helmet" value="yes" checked>
+        <label for="helmet-yes">Да</label>
+        <input type="radio" id="helmet-no" name="helmet" value="no">
+        <label for="helmet-no">Нет</label><br><br>
+
+        <label for="gloves">Перчатки:</label>
+        <input type="checkbox" id="gloves" name="equipment" value="gloves">
+        <label for="gloves">Да</label><br><br>
+
+        <label for="boots">Ботинки:</label>
+        <input type="checkbox" id="boots" name="equipment" value="boots">
+        <label for="boots">Да</label><br><br>
+
+        <label for="upload-measurements">Загрузите ваши размеры:</label>
+        <input type="file" id="upload-measurements" name="measurements"><br><br>
+    </fieldset>
+
+    <!-- Учетная информация -->
+    <fieldset>
+        <legend>Учетная запись</legend>
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required><br><br>
+    </fieldset>
+
+    <!-- Управление формой -->
+    <input type="submit" value="Отправить заказ">
+    <input type="reset" value="Сбросить данные">
+
+</form>
+
+</body>
+</html>
