@@ -1,0 +1,94 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background: rgb(52, 206, 142);
+    height: 100px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    margin: 0;
+}
+
+button {
+    margin: 50px;
+    font-size: 20px;
+    background-color: red;
+    animation: vibrate 0.1s infinite;
+}
+
+button:hover {
+    animation: none;
+    background-color: green;
+}
+
+@keyframes vibrate {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+    100% { transform: translateX(0); }
+}
+
+a {
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+a:hover {
+    color: green;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    background-color: green;
+    transition: width 0.5s, left 0.5s;
+}
+
+a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Анимация мяча */
+.ball {
+    width: 50px;
+    height: 50px;
+    background-color: #0c0101;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10%; /* Начало падения не с самого верха */
+    animation: fall 3s ease-in-out infinite; /* Увеличиваем продолжительность для плавного движения */
+}
+
+/* Исправленная анимация падения и отскока */
+@keyframes fall {
+    0% { top: 10%; }       /* Начало падения */
+    35% { top: 90%; transform: scaleY(0.7); } /* Удар о землю с деформацией */
+    50% { top: 70%; transform: scaleY(1); }   /* Первый отскок на 70% */
+    65% { top: 90%; transform: scaleY(0.7); } /* Удар снова */
+    75% { top: 60%; transform: scaleY(1); }   /* Второй отскок на 60% */
+    85% { top: 90%; transform: scaleY(0.7); } /* Удар снова */
+    90% { top: 55%; transform: scaleY(1); }   /* Третий отскок на 55% */
+    95% { top: 90%; transform: scaleY(0.7); } /* Удар снова */
+    97% { top: 53%; transform: scaleY(1); }   /* Маленький отскок */
+    99% { top: 90%; transform: scaleY(1); }   /* Финальное приземление */
+    100% { top: 90%; transform: scaleY(1); }  /* Пауза перед повтором */
+}
